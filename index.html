@@ -181,6 +181,7 @@ figcaption{margin-top:8px;font-size:14.5px;line-height:1.6;color:var(--color-mut
 /* ── 상태 표시: 모양과 글자로 구분 ───────── */
 .st{display:inline-flex;align-items:center;gap:4px;font-size:14px;font-weight:600;line-height:1.2;padding:4px 12px 4px 8px;border:var(--rule-hair) solid transparent;border-radius:var(--radius-card);white-space:nowrap;vertical-align:middle}
 .st svg.i{width:14px;height:14px}
+.st + .dim{display:inline-block;margin-left:8px;white-space:nowrap;vertical-align:middle}
 .st-applied{background:var(--color-teal);color:var(--color-on-ink)}
 .st-ready{background:transparent;color:var(--color-navy);border-color:var(--color-navy)}
 .st-wait{background:var(--tint-ochre);color:var(--color-ochre);border-color:var(--color-ochre-mark);border-style:dashed}
@@ -445,9 +446,9 @@ td.when{white-space:nowrap;font-weight:600;color:var(--color-ink)}
 .hb-t b{font:600 20px/1 var(--font-display);font-variant-numeric:lining-nums tabular-nums}
 .hb-now .hb-t i{background:var(--chap)}
 .hb-alt .hb-t i{background:repeating-linear-gradient(135deg,var(--color-rule-2) 0 6px,var(--color-paper-3) 6px 12px)}
-.hb-x{font:600 24px/1.1 var(--font-display);color:var(--color-ink);text-align:right}
-.hb-x small{display:block;font:400 13px/1.4 var(--font-body);color:var(--color-rust)}
-.hb-head .hb-x{font:inherit;color:inherit}
+.hb-x{font:600 24px/1.1 var(--font-display);color:var(--color-ink);text-align:right;white-space:nowrap}
+.hb-x small{display:block;white-space:normal;font:400 13px/1.4 var(--font-body);color:var(--color-rust)}
+.hb-head .hb-x{font:inherit;color:inherit;white-space:normal}
 .play .hb-t i{animation:grow-x .9s var(--ease-out) backwards;animation-delay:calc(var(--n,0) * 160ms + 300ms)}
 .phases{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 var(--gap-columns)}
 .phases li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:0 12px;padding:12px 0;border-top:var(--rule-hair) solid var(--color-rule)}
@@ -460,6 +461,7 @@ strong{font-weight:600;color:var(--color-ink)}
 mark.hl{background:none;color:var(--color-ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--color-ochre-light);text-decoration-thickness:.42em;text-underline-offset:-.22em;text-decoration-skip-ink:none}
 em{font-style:italic;color:var(--chap)}
 .takeaway em,.takeaway strong{color:inherit}
+.takeaway .tk{min-width:0}
 
 /* ── 오픈소스: 원칙 ───────────────────────── */
 .statement{margin:0 0 28px;max-width:none;font:600 clamp(26px,3vw,40px)/1.32 var(--font-display);letter-spacing:var(--tracking-display);color:var(--chap);text-wrap:balance}
@@ -956,7 +958,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div class="c-next"><h3>다음 단계</h3><p>11월 9~15일 외부 AI 서비스를 연결합니다.<br><strong class="c">11월 16~22일 테스트 버전을 웹으로 배포</strong>하고 온라인 만족도 조사를 받습니다.<br>그 전에 0.3.10을 내부 테스트하고 0.4를 만들어 배포합니다.</p></div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>전체 소리 분석과 서버 연결은 마쳤고, 느린 음악·효과음 분석과 자막 확인, 조사 문항이 남았습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">전체 소리 분석과 서버 연결은 마쳤고, 느린 음악·효과음 분석과 자막 확인, 조사 문항이 남았습니다.</span></p>
 </div>
 </section>
 
@@ -988,7 +990,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div><dt><span class="st st-plan"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>추가 개발·검증 예정</span></dt><dd>계획·비교 실험 단계.<br>제품에는 아직 없습니다.</dd></div>
     </dl>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>서버 연결을 마쳤고 <strong>11월 본 실증</strong>을 준비하고 있습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">서버 연결을 마쳤고 <strong>11월 본 실증</strong>을 준비하고 있습니다.</span></p>
 </div>
 </section>
 
@@ -1007,7 +1009,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p>온소리 자막&nbsp;in&nbsp;YouTube는 이 장면 정보를 글과 글자 크기·굵기로 옮기려 합니다.</p>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>‘[음악]’ 한 줄로는 장면의 긴장과 반전이 전해지지 않습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">‘[음악]’ 한 줄로는 장면의 긴장과 반전이 전해지지 않습니다.</span></p>
 </div>
 </section>
 
@@ -1030,7 +1032,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </div>
     <p class="small" style="margin-top:14px">10월 초 신청서에 실은 예시입니다.<br><mark class="hl">이해에 도움이 되는지</mark>는 <span class="term" tabindex="0" data-def="수어를 주된 언어로 쓰는 청각장애인입니다.">농인</span>·<span class="term" tabindex="0" data-def="나이가 들거나 다른 이유로 청력이 낮아진 사람입니다.">난청인</span> 이용자와 확인할 계획입니다.</p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>음악의 시작과 멈춤, <strong>말의 세기까지 글자로</strong> 전하는 것이 목표입니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">음악의 시작과 멈춤, <strong>말의 세기까지 글자로</strong> 전하는 것이 목표입니다.</span></p>
 </div>
 </section>
 
@@ -1049,7 +1051,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div class="who"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M13 18a10 10 0 0 1 20 0c0 6-4 8-6 11s-2 8-7 8a5 5 0 0 1-5-4"/><path d="M19 18a4 4 0 0 1 8 0c0 3-3 4-3 7"/></svg><div><h3>난청인</h3><p>나이 등으로 청력이 낮아진 사람.<br>필요한 소리 정보의 양이 <span class="term" tabindex="0" data-def="수어를 주된 언어로 쓰는 청각장애인입니다.">농인</span>과 다를 수 있습니다.</p></div></div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>소리 정보의 양과 표현 방식을 시청자가 고를 수 있어야 합니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">소리 정보의 양과 표현 방식을 시청자가 고를 수 있어야 합니다.</span></p>
 </div>
 </section>
 
@@ -1081,7 +1083,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </ul>
     <p class="small" style="margin-top:12px">0.3.9(11월 4일)부터 가이드라인처럼 <strong>효과음은 ♪ … ♪, 배경음악은 ♬ … ♬</strong>로 감쌉니다.<br>0.3.9는 <span class="term" tabindex="0" data-def="Chrome 확장 프로그램을 내려받는 공식 상점(Chrome 웹 스토어)입니다.">웹스토어</span> 심사를 기다리고 있습니다.</p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>이 기준에 음악의 흐름, 말투, 시청자의 선택을 더하려 합니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">이 기준에 음악의 흐름, 말투, 시청자의 선택을 더하려 합니다.</span></p>
 </div>
 </section>
 
@@ -1109,7 +1111,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </div>
     <p class="small" style="margin-top:12px">0.3.8부터 선택 기능이 있습니다.<br><strong>사용자가 동의한 경우에만</strong> 소리를 온소리 자막&nbsp;in&nbsp;YouTube <span class="term" tabindex="0" data-def="요청을 받아 일을 처리하고 결과를 돌려주는 컴퓨터입니다.">서버</span>와 외부 AI 업체(<span class="term" tabindex="0" data-def="AI 모델을 빌려 쓰게 해 주는 외부 유료 업체입니다. 「온소리 자막 in YouTube」 서버가 대사 인식을 맡길 곳입니다.">DeepInfra</span>)로 보내 대사와 시각만 받아 옵니다.<br>유료 분석을 켜기 전까지 화면에 나타나지 않습니다.</p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>기본은 내 컴퓨터의 브라우저 안에서 영상 전체를 분석합니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">기본은 내 컴퓨터의 브라우저 안에서 영상 전체를 분석합니다.</span></p>
 </div>
 </section>
 
@@ -1153,7 +1155,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p class="small" style="margin-top:12px">실제 조작 창도 막대로 위치를 바꿉니다.<br>자막이 화면 밖으로 잘리지 않게 자동으로 맞춥니다.<br>이 막대에서는 방향키를 눌러도 쪽이 넘어가지 않습니다.</p>
     </form>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>옮긴 위치는 <strong>새로고침해도 유지</strong>됩니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">옮긴 위치는 <strong>새로고침해도 유지</strong>됩니다.</span></p>
 </div>
 </section>
 
@@ -1183,7 +1185,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </table>
     </div></div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>가장 큰 변화는 이용 키(API 키) 없이 브라우저에서 바로 분석하게 된 점입니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">가장 큰 변화는 이용 키(API 키) 없이 브라우저에서 바로 분석하게 된 점입니다.</span></p>
 </div>
 </section>
 
@@ -1207,7 +1209,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <li class="next"><span class="sm-n" aria-hidden="true">다음</span><div class="sm-when">11월 9~22일<small>연결, 본 <span class="term" tabindex="0" data-def="실제 이용자가 실제 환경에서 써 보며 효과를 확인하는 시험입니다.">실증</span></small></div><div><h3>외부 AI 연결과 본 실증</h3><p>11월 9~15일 외부 AI를 연결해 비교 시험을 하고, 11월 16~22일 테스트 버전을 웹으로 배포해 만족도 조사를 받습니다.</p></div><p class="sm-left"><b>이어서</b> 홍보 경로, 조사 문항, 검수 영상 확정<span class="sm-ref">자세히 <a href="#p34">34쪽</a>, <a href="#p50">50쪽</a></span></p></li>
     </ol>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>다음 단계는 <strong class="c">11월 본 실증</strong>입니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">다음 단계는 <strong class="c">11월 본 실증</strong>입니다.</span></p>
 </div>
 </section>
 
@@ -1257,7 +1259,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>쓰는 절차를 단순하게 바꿨습니다.<br>다른 영상은 이어서 시험합니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">쓰는 절차를 단순하게 바꿨습니다.<br>다른 영상은 이어서 시험합니다.</span></p>
 </div>
 </section>
 
@@ -1283,7 +1285,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div class="stat"><div class="sv"><small>가로 </small>29<small>%</small><small>, 세로 </small>49<small>%</small></div><p class="sl">자막 위치 이동</p><p>기본 위치(가로 50%, 세로 88%)에서 옮겼습니다.<br>새로고침 뒤 유지와 되돌리기도 확인했습니다.</p></div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>소리 받기, 분석, 자막 표시가 <strong class="c">처음으로 끝까지</strong> 이어졌습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">소리 받기, 분석, 자막 표시가 <strong class="c">처음으로 끝까지</strong> 이어졌습니다.</span></p>
 </div>
 </section>
 
@@ -1300,7 +1302,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <table class="stack">
         <thead><tr><th scope="col">조작</th><th scope="col">0.3.3</th><th scope="col">0.3.4</th></tr></thead>
         <tbody class="m-seq">
-          <tr><td data-label="조작">가로 위치 막대에서 → 세 번</td><td data-label="0.3.3">위치 50→53, 영상도 30→45초로 넘어감</td><td data-label="0.3.4" class="quote">위치만 50→53, 영상 그대로</td></tr>
+          <tr><td data-label="조작">가로 위치 막대에서 → 세&nbsp;번</td><td data-label="0.3.3">위치 50→53, 영상도 30→45초로 넘어감</td><td data-label="0.3.4" class="quote">위치만 50→53, 영상 그대로</td></tr>
           <tr><td data-label="조작">기본 크기 칸에 16 입력</td><td data-label="0.3.3">영상이 216초(60% 지점)로 건너뜀</td><td data-label="0.3.4" class="quote">값만 16으로 바뀜</td></tr>
           <tr><td data-label="조작">체크 상자에서 스페이스</td><td data-label="0.3.3">체크는 그대로, 영상 재생 시작</td><td data-label="0.3.4" class="quote">체크 해제, 영상 정지 유지</td></tr>
           <tr><td data-label="조작">온소리 자막&nbsp;in&nbsp;YouTube 밖에서 →</td><td data-label="0.3.3">30→35초</td><td data-label="0.3.4" class="quote">30→35초 (YouTube 단축키 그대로)</td></tr>
@@ -1320,7 +1322,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p class="small">긴 문장은 지우지 않고, 걸러 낸 문장은 결과 파일에 남깁니다.<br><strong>화면 자막의 실제 대사는 하나도 지우지 않았습니다.</strong><br>대사 앞 ‘- ’ 기호도 없앴습니다.</p>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>영상이 멋대로 넘어가던 문제를 고치고 가짜 대사를 16개에서 5개로 줄였습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">영상이 멋대로 넘어가던 문제를 고치고 가짜 대사를 16개에서 5개로 줄였습니다.</span></p>
 </div>
 </section>
 
@@ -1334,7 +1336,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div class="m-seq">
         <div class="hb" role="row"><span class="hb-l" role="cell">원래 소리(0.3.3)</span><span class="hb-t" role="cell"><i style="--v:45.5%"></i><b>45.5%</b></span><span class="hb-x" role="cell">16</span></div>
         <div class="hb hb-now" role="row"><span class="hb-l" role="cell">원래 소리(0.3.4)</span><span class="hb-t" role="cell"><i style="--v:42.7%"></i><b>42.7%</b></span><span class="hb-x" role="cell">5</span></div>
-        <div class="hb hb-alt" role="row"><span class="hb-l" role="cell">목소리만 남긴 소리(0.3.3)</span><span class="hb-t" role="cell"><i style="--v:33.4%"></i><b>33.4%</b></span><span class="hb-x" role="cell">4 <small>실제 대사 1줄 빠짐</small></span></div>
+        <div class="hb hb-alt" role="row"><span class="hb-l" role="cell">목소리만 남긴 소리(0.3.3)</span><span class="hb-t" role="cell"><i style="--v:33.4%"></i><b>33.4%</b></span><span class="hb-x" role="cell">4 <small>실제 대사 1줄&nbsp;빠짐</small></span></div>
       </div>
     </div>
     <div class="cols-3" style="margin-top:24px">
@@ -1344,7 +1346,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </div>
     <p class="small" style="margin-top:12px">임시 정답은 화면 자막을 AI로 읽은 것이고, 영상 1편 결과입니다.<br><mark class="hl">앞으로는 사운드 담당 팀원의 스크립트와 편집 기록을 기준으로 자막을 확인합니다.</mark></p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>처음으로 틀린 글자 비율을 비교할 수치를 얻었습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">처음으로 틀린 글자 비율을 비교할 수치를 얻었습니다.</span></p>
 </div>
 </section>
 
@@ -1372,7 +1374,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>자막 내용은 그대로 두고 보이는 모양만 고를 수 있게 했습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">자막 내용은 그대로 두고 보이는 모양만 고를 수 있게 했습니다.</span></p>
 </div>
 </section>
 
@@ -1401,7 +1403,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div class="more"><button type="button" class="more-toggle" aria-expanded="false" aria-controls="more-b-inhouse-error">자세히 보기: 연결이 끊길 때 나온 오류 문구<span class="pm"><span class="state">펼치기</span><svg class="i" aria-hidden="true"><use href="#i-expand"/></svg></span></button><div class="more-body" id="more-b-inhouse-error"><p class="small">연결이 끊길 때 나온 오류 문구는 ‘Extension context invalidated’입니다.<br>확장 프로그램이 새로 불러와져 이전 연결을 더 쓸 수 없다는 영어 안내입니다.</p></div></div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>설치와 대사 분석은 됐지만, 음악·효과음 분석이 느리고 중간에 멈췄습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">설치와 대사 분석은 됐지만, 음악·효과음 분석이 느리고 중간에 멈췄습니다.</span></p>
 </div>
 </section>
 
@@ -1429,7 +1431,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p class="small">시안은 AI 이미지 생성으로 만들고 팀 채팅에서 의견을 모아 고쳤습니다.</p>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>헤드폰 쓴 오소리에 다른 감각으로 소리를 전한다는 뜻을 담았습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">헤드폰 쓴 오소리에 다른 감각으로 소리를 전한다는 뜻을 담았습니다.</span></p>
 </div>
 </section>
 
@@ -1445,7 +1447,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </div>
     <p class="small" style="margin-top:16px">새 아이콘과 상세 이미지는 11월 5일 심사에 제출한 0.3.9에 담았습니다.<br><strong>0.3.9는 검토 대기 중</strong>입니다.</p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>설치 전에 하는 일, 쓰는 법, 고를 수 있는 것을 세 장으로 보여 줍니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">설치 전에 하는 일, 쓰는 법, 고를 수 있는 것을 세 장으로 보여 줍니다.</span></p>
 </div>
 </section>
 
@@ -1466,7 +1468,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </div>
   </div>
   <p class="small"><mark class="hl">두 영상의 음악 자막은 목표 표현 예시입니다.</mark><br>지금 분석은 ‘배경 음악이 이어짐’으로 표시합니다.<br>화면 속 글자는 위 설명에 옮겨 적었습니다.</p>
-  <p class="takeaway"><span class="k">한 줄</span>마스코트가 보통 자막과 겨루는 구성으로 온소리 자막&nbsp;in&nbsp;YouTube의 차이를 짧게 보여 줍니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">마스코트가 보통 자막과 겨루는 구성으로 온소리 자막&nbsp;in&nbsp;YouTube의 차이를 짧게 보여 줍니다.</span></p>
 </div>
 </section>
 
@@ -1496,7 +1498,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </ul>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>설치 전에 자막 표현을 바꿔 보고 영상으로 이해하는 페이지입니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">설치 전에 자막 표현을 바꿔 보고 영상으로 이해하는 페이지입니다.</span></p>
 </div>
 </section>
 
@@ -1539,7 +1541,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </ul>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>확장 프로그램 연결까지 마쳤습니다.<br>유료 분석을 켜면 동의한 사용자만 하루 한도 안에서 씁니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">확장 프로그램 연결까지 마쳤습니다.<br>유료 분석을 켜면 동의한 사용자만 하루 한도 안에서 씁니다.</span></p>
 </div>
 </section>
 
@@ -1574,7 +1576,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div class="more"><button type="button" class="more-toggle" aria-expanded="false" aria-controls="more-g2-038-cloud">자세히 보기: 시험 방법과 함께 고친 안내<span class="pm"><span class="state">펼치기</span><svg class="i" aria-hidden="true"><use href="#i-expand"/></svg></span></button><div class="more-body" id="more-g2-038-cloud"><p class="small">모의 분석(실제 AI 대신 가짜 결과)으로 열쇠 발급, 소리 보내기, 결과 반영까지 확인했습니다.<br>설치 권한을 늘리지 않아 기존 사용자에게 허용을 다시 묻지 않습니다.<br>개인정보 안내·사용 방법·<span class="term" tabindex="0" data-def="Chrome 확장 프로그램을 내려받는 공식 상점(Chrome 웹 스토어)입니다.">웹스토어</span> 설명도 이 기능에 맞게 고쳤습니다.</p></div></div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>GPU가 있는 PC는 대사 인식이 더 정확하고 빨라졌습니다.<br>클라우드 분석은 동의한 사용자만 씁니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">GPU가 있는 PC는 대사 인식이 더 정확하고 빨라졌습니다.<br>클라우드 분석은 동의한 사용자만 씁니다.</span></p>
 </div>
 </section>
 
@@ -1604,7 +1606,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p class="small">(*Google 안내는 웹스토어 검토에 몇 주가 걸릴 수 있다고 설명합니다.)</p>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>효과음과 배경음악을 가치봄 기준 기호로 구분했고, 웹스토어 심사를 기다리고 있습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">효과음과 배경음악을 가치봄 기준 기호로 구분했고, 웹스토어 심사를 기다리고 있습니다.</span></p>
 </div>
 </section>
 
@@ -1639,7 +1641,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p class="small">0.3.10 <span class="term" tabindex="0" data-def="Chrome 확장 프로그램을 내려받는 공식 상점(Chrome 웹 스토어)입니다.">웹스토어</span> 제출은 계정 소유자가 진행합니다.<br>지금 심사 중인 버전은 0.3.9입니다.</p>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>연결이 끊겨도 멈추지 않고, 새로고침하라고 알려 줍니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">연결이 끊겨도 멈추지 않고, 새로고침하라고 알려 줍니다.</span></p>
 </div>
 </section>
 
@@ -1671,7 +1673,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p class="small" style="margin-top:8px">출처: 2026년 10월 29일 0.3.3 실제 분석 결과 파일.</p>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span><strong>대사 오류와 뭉뚱그린 음악 설명이 가장 큰 과제입니다.</strong></p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk"><strong>대사 오류와 뭉뚱그린 음악 설명이 가장 큰 과제입니다.</strong></span></p>
 </div>
 </section>
 
@@ -1691,7 +1693,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </div>
   </div>
   <p class="small">웹스토어 공개본은 0.3.3이고, 0.3.9는 11월 5일 심사에 제출해 검토를 기다리고 있습니다.</p>
-  <p class="takeaway"><span class="k">한 줄</span>테스트 버전은 웹으로 나눠 실제 환경에서 써 보게 하고, 검수 자막은 팀원이 만든 영상으로 준비합니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">테스트 버전은 웹으로 나눠 실제 환경에서 써 보게 하고, 검수 자막은 팀원이 만든 영상으로 준비합니다.</span></p>
 </div>
 </section>
 
@@ -1723,7 +1725,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p class="small">조사 첫머리에 <span class="term" tabindex="0" data-def="내 컴퓨터가 아니라 인터넷으로 빌려 쓰는 원격 컴퓨터(서버)입니다.">클라우드</span> 선택 기능의 소리 전송과 보관·삭제 기준을 안내합니다.</p>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>실제 이용 환경에서 써 보게 하고, 온라인 조사로 의견을 모읍니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">실제 이용 환경에서 써 보게 하고, 온라인 조사로 의견을 모읍니다.</span></p>
 </div>
 </section>
 
@@ -1749,7 +1751,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </div>
   </div>
   <p class="small">80% 목표는 <span class="term" tabindex="0" data-def="AI가 ‘있다’고 표시한 것 중 실제로 맞은 비율입니다. 10건 표시해 8건이 맞으면 80%입니다.">정밀도</span>에만 적용합니다.<br><mark class="hl">틀린 설명이 빠진 설명보다 신뢰를 더 깎기 때문입니다.</mark> <span class="term" tabindex="0" data-def="실제로 있는 것 중 AI가 찾아낸 비율입니다. 실제 소리 20건 중 8건을 찾으면 40%입니다.">재현율</span>과 잘못 찾은·놓친 소리 수는 따로 기록합니다.</p>
-  <p class="takeaway"><span class="k">한 줄</span>80% 목표는 맞힌 비율(정밀도)로 셉니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">80% 목표는 맞힌 비율(정밀도)로 셉니다.</span></p>
 </div>
 </section>
 
@@ -1769,7 +1771,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     <p class="small">50%·80%는 처음 정한 값이며 시험 결과를 보고 조정합니다.<br><strong>사람 확정본만 정답으로 씁니다.</strong></p>
     <div class="more"><button type="button" class="more-toggle" aria-expanded="false" aria-controls="more-g3-fixbasis">자세히 보기: 비교 방법과 결과 기록<span class="pm"><span class="state">펼치기</span><svg class="i" aria-hidden="true"><use href="#i-expand"/></svg></span></button><div class="more-body" id="more-g3-fixbasis"><p class="small">음성 인식 문장과 그 시점 앞뒤 1.5초 안의 제작자 자막을 비교합니다.<br>일치 정도는 띄어쓰기·문장부호를 뺀 글자 겹침으로 셉니다.<br>결과는 ‘교정 성공·잘못 교정·교정 안 됨’으로 나눠 셉니다.<br>음성 인식 원문, 자동 교정, 사람 확정본을 따로 남깁니다.</p></div></div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>화면 자막이나 어색한 문장만 보고 대사를 고치지 않습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">화면 자막이나 어색한 문장만 보고 대사를 고치지 않습니다.</span></p>
 </div>
 </section>
 
@@ -1806,7 +1808,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>실증 방식만 제안과 다르게 정했고 나머지는 반영했습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">실증 방식만 제안과 다르게 정했고 나머지는 반영했습니다.</span></p>
 </div>
 </section>
 
@@ -1820,7 +1822,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     <div class="goal"><h3><span class="num">3</span>크기와 위치를 편안하게</h3><dl class="facts"><dt>해 볼 것</dt><dd>지금 방식과 자문 비교안(효과음·음악만 3~5단계 크기)을 나란히 시험합니다.</dd><dt>확인할 것</dt><dd>읽기 편한 정도, 강조의 이해 도움 여부</dd><dt>10/30 진행</dt><dd>방향키로 위치 막대를 옮길 때 영상이 넘어가던 문제를 0.3.4에서 고쳤습니다(10월 31일 <span class="term" tabindex="0" data-def="프로그램 코드와 설치 파일을 올려 공유하는 사이트입니다.">GitHub</span> 공개).</dd></dl></div>
     <div class="goal"><h3><span class="num">4</span>기다림과 오류를 줄이기</h3><dl class="facts"><dt>해 볼 것</dt><dd>내려받기·소리 받기·분석 시간을 나눠 재고 실패를 유형별로 모읍니다.<br>몰래 녹음이나 유료 분석 자동 재요청은 하지 않습니다.</dd><dt>확인할 것</dt><dd>대기 시간 감소, 실패 이유 안내</dd></dl></div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>근거가 확인된 개선만 제품에 넣습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">근거가 확인된 개선만 제품에 넣습니다.</span></p>
 </div>
 </section>
 
@@ -1838,7 +1840,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
   </ol>
   <p class="small" style="margin-top:20px">8일 배포·조사 준비, 15일 외부 AI 연결을 점검합니다.<br><mark class="hl">늦어지면 11월 23~25일 보완 실증</mark>을 합니다.</p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>8일·15일 점검을 마쳐야 <strong>11월 16~22일 본 실증</strong>이 가능합니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">8일·15일 점검을 마쳐야 <strong>11월 16~22일 본 실증</strong>이 가능합니다.</span></p>
 </div>
 </section>
 
@@ -1863,7 +1865,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     <p>현장에서 약 10명이 두 그룹으로 체험하는 계획을 <strong class="c">웹 배포와 온라인 조사</strong>로 바꿨습니다(11월 5일).</p>
     <p class="small" style="margin-top:12px">쓰기 편한 정도(사용성)는 완료 비율·시간, 오류·재시도·도움 요청 횟수로 기록합니다.<br>읽기·위치·강조·기다림 의견도 받습니다.</p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>목표 숫자는 그대로, 재는 방법은 온라인 조사에 맞춥니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">목표 숫자는 그대로, 재는 방법은 온라인 조사에 맞춥니다.</span></p>
 </div>
 </section>
 
@@ -1897,7 +1899,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>외부 AI 사용료는 <strong>10만 원 안</strong>에서 씁니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">외부 AI 사용료는 <strong>10만 원 안</strong>에서 씁니다.</span></p>
 </div>
 </section>
 
@@ -1918,7 +1920,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </figure>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>n8n·Grafana는 10월 30일, 클라우드는 11월 2일 <strong>승인</strong>됐습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">n8n·Grafana는 10월 30일, 클라우드는 11월 2일 <strong>승인</strong>됐습니다.</span></p>
 </div>
 </section>
 
@@ -1935,11 +1937,11 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <figure class="shot-wide dark flow-run" style="--b:var(--brand-n8n);margin-top:14px">
       <p class="cap-head pair-head"><svg class="bl" role="img" aria-label="n8n 로고"><use href="#b-n8n"/></svg>n8n · 준비한 서버 점검 흐름</p>
       <img src="data:image/jpeg;base64,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" width="1400" height="219" alt="n8n 작업 흐름 미리보기. 직접 실행, 주소 설정, 주소 확인, 서버 상태 확인, 관리 상태 확인의 다섯 상자가 화살표로 이어져 있다.">
-      <figcaption><span class="real-label">n8n 미리보기</span>서버 점검 흐름을 n8n 공식 미리보기로 그린 그림입니다.<br>상자 다섯 개가 점검 순서입니다.<br>11월 4일 직접 실행에서 <strong>정상 응답</strong>을 받았습니다(자동 실행은 꺼 둠).</figcaption>
+      <figcaption><span class="real-label">n8n 미리보기</span>서버 점검 흐름을 n8n 공식 미리보기로 그린 그림입니다.<br>상자 다섯 개가 점검 순서입니다.<br>11월 4일 직접 실행에서 <strong>정상 응답</strong>을 받았습니다(자동 실행은 꺼&nbsp;둠).</figcaption>
     </figure>
     <div class="more"><button type="button" class="more-toggle" aria-expanded="false" aria-controls="more-g3-server">자세히 보기: 점검 순서와 서버 사양<span class="pm"><span class="state">펼치기</span><svg class="i" aria-hidden="true"><use href="#i-expand"/></svg></span></button><div class="more-body" id="more-g3-server"><p class="small">점검 순서는 직접 실행 → 주소 설정 → 주소 확인 → 서버 상태 확인 → 관리 상태 확인입니다.<br>승인 뒤 이 흐름을 팀 n8n 계정에 가져왔습니다.<br>클라우드 서버는 처리 장치 2개, 메모리 4GB, 저장 공간 50GB, 운영체제 <span class="term" tabindex="0" data-def="서버에 많이 쓰는 무료 운영체제입니다.">Rocky Linux</span> 8.10입니다.</p></div></div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>세 도구는 서버 운영을 돕고, 자막은 AI가 만듭니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">세 도구는 서버 운영을 돕고, 자막은 AI가 만듭니다.</span></p>
 </div>
 </section>
 
@@ -1954,7 +1956,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </figure>
     <p class="small">나머지 4칸은 평균 완료 시간·보낸 소리 길이·저장 용량·기록 수집 상태입니다.</p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>대시보드는 처리 현황만 보여 주고, <strong>자막 정답 여부는 사람이 확인</strong>합니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">대시보드는 처리 현황만 보여 주고, <strong>자막 정답 여부는 사람이 확인</strong>합니다.</span></p>
 </div>
 </section>
 
@@ -1971,7 +1973,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <dl class="facts"><dt>답변</dt><dd>NAVER 클라우드 서버 1대 ‘운영’(켜짐) 상태(11월 3일)</dd><dt>연결</dt><dd>11월 4일 작업 접수 프로그램 설치, 모의 분석 완료.<br>이후 요청을 받지 않는 ‘꺼짐’ 상태</dd><dt>다음 시험</dt><dd><mark class="hl">재시작 뒤 자동 시작, 백업·복구, 대량 요청(부하) 시험</mark>.<br>이용 기간(12월 2일까지) 연장은 11월 18일부터 신청</dd></dl></div>
   </div>
   <p class="small">기술지원 질문은 클라우드 승인·접속, Grafana 데이터 연결·공개 범위, n8n 고정 주소였습니다.<br>서버 접속 정보는 싣지 않습니다.</p>
-  <p class="takeaway"><span class="k">한 줄</span>세 자원을 모두 연결했고, 비용이 들지 않는 모의 분석까지 마쳤습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">세 자원을 모두 연결했고, 비용이 들지 않는 모의 분석까지 마쳤습니다.</span></p>
 </div>
 </section>
 
@@ -1988,7 +1990,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <li><b class="kw">공개 조건 지키기</b><p>모두 고쳐 쓰고 다시 배포해도 되는 조건입니다.<br>만든 사람을 밝히는 안내문을 함께 넣었습니다.</p></li>
     </ul>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>공개된 AI를 가져다 쓰고, 기본 분석은 내 컴퓨터 안에서 끝냅니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">공개된 AI를 가져다 쓰고, 기본 분석은 내 컴퓨터 안에서 끝냅니다.</span></p>
 </div>
 </section>
 
@@ -2024,7 +2026,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>AI는 가져오고, 한국어 소리 설명과 화면은 직접 만들었습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">AI는 가져오고, 한국어 소리 설명과 화면은 직접 만들었습니다.</span></p>
 </div>
 </section>
 
@@ -2047,7 +2049,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div><b><span class="term" tabindex="0" data-def="구글이 공개한 소리 분류 AI입니다. 같은 일을 하는 AST로 바꿔 썼습니다.">YAMNet</span></b><p>신청서 계획의 소리 분류 AI입니다.<br>같은 일을 하는 <strong><span class="term" tabindex="0" data-def="소리가 말소리인지, 음악인지, 효과음인지 가려내는 AI입니다.">AST</span>로 바꿨습니다.</strong></p></div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>같은 영상, 같은 정답으로 나아진 것만 제품에 넣습니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">같은 영상, 같은 정답으로 나아진 것만 제품에 넣습니다.</span></p>
 </div>
 </section>
 
@@ -2069,7 +2071,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <div class="case-verdict"><b>판단</b><p><mark class="hl">그대로 넣지 않습니다.</mark><br>두 결과를 합치는 기준부터 정합니다.<br>계산량이 많아 AI 계산 장치(<span class="term" tabindex="0" data-def="AI 계산을 빠르게 처리하는 장치입니다. 무거운 AI는 GPU가 있는 서버에서 돌립니다.">GPU</span>) <span class="term" tabindex="0" data-def="요청을 받아 일을 처리하고 결과를 돌려주는 컴퓨터입니다.">서버</span>용 후보로 둡니다.</p></div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>틀린 글자는 줄었지만 빠진 대사도 생겨, 두 결과를 합치는 기준부터 정합니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">틀린 글자는 줄었지만 빠진 대사도 생겨, 두 결과를 합치는 기준부터 정합니다.</span></p>
 </div>
 </section>
 
@@ -2097,7 +2099,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
           <thead><tr><th scope="col">이름</th><th scope="col">쓰임새</th><th scope="col">라이선스</th><th scope="col">공식 출처</th></tr></thead>
           <tbody>
             <tr><td data-label="이름">OpenAI Whisper large-v3-turbo</td><td data-label="위치"><span class="term" tabindex="0" data-def="AI 계산을 빠르게 처리하는 장치입니다. 무거운 AI는 GPU가 있는 서버에서 돌립니다.">GPU</span>가 있을 때 대사 인식(0.3.8)</td><td data-label="라이선스">MIT</td><td data-label="출처"><a href="https://huggingface.co/openai/whisper-large-v3-turbo">huggingface.co/openai/whisper-large-v3-turbo</a></td></tr>
-            <tr><td data-label="이름">OpenAI Whisper (base) + <span class="term" tabindex="0" data-def="AI 모델을 인터넷 브라우저 안에서 돌릴 수 있게 해 주는 공개 프로그램입니다.">Transformers.js</span> 3.7.6</td><td data-label="위치">현재 <span class="term" tabindex="0" data-def="Chrome·Edge처럼 인터넷 화면을 보는 프로그램입니다.">브라우저</span> 대사 인식(GPU가 없을 때)</td><td data-label="라이선스">Whisper 코드 MIT, 모델 Apache-2.0, Transformers.js Apache-2.0</td><td data-label="출처"><a href="https://github.com/openai/whisper">github.com/openai/whisper</a></td></tr>
+            <tr><td data-label="이름">OpenAI Whisper (base) + <span class="term" tabindex="0" data-def="AI 모델을 인터넷 브라우저 안에서 돌릴 수 있게 해 주는 공개 프로그램입니다.">Transformers.js</span> 3.7.6</td><td data-label="위치">현재 <span class="term" tabindex="0" data-def="Chrome·Edge처럼 인터넷 화면을 보는 프로그램입니다.">브라우저</span> 대사 인식(GPU가 없을&nbsp;때)</td><td data-label="라이선스">Whisper 코드 MIT, 모델 Apache-2.0, Transformers.js Apache-2.0</td><td data-label="출처"><a href="https://github.com/openai/whisper">github.com/openai/whisper</a></td></tr>
             <tr><td data-label="이름">AST (AudioSet)</td><td data-label="위치">현재 음악·효과음 분류</td><td data-label="라이선스">BSD-3-Clause</td><td data-label="출처"><a href="https://github.com/YuanGongND/ast">github.com/YuanGongND/ast</a></td></tr>
             <tr><td data-label="이름">Tesseract.js 6.0.1</td><td data-label="위치">현재 60초 녹음 보조 방법의 화면 글자 읽기</td><td data-label="라이선스">Apache-2.0</td><td data-label="출처"><a href="https://github.com/naptha/tesseract.js">github.com/naptha/tesseract.js</a></td></tr>
             <tr><td data-label="이름">yt-dlp 2026.10.21</td><td data-label="위치">소리 가져오는 방식의 참고 자료(실행 프로그램으로 넣지 않음)</td><td data-label="라이선스">Unlicense</td><td data-label="출처"><a href="https://github.com/yt-dlp/yt-dlp">github.com/yt-dlp/yt-dlp</a></td></tr>
@@ -2109,13 +2111,13 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
             <tr><td data-label="이름">Ultimate Vocal Remover (UVR)</td><td data-label="위치">사람이 들어 보며 비교하는 PC 프로그램</td><td data-label="라이선스">MIT (모델마다 조건 별도)</td><td data-label="출처"><a href="https://github.com/Anjok07/ultimatevocalremovergui">github.com/Anjok07/ultimatevocalremovergui</a></td></tr>
             <tr><td data-label="이름">Bandit v2</td><td data-label="위치">대사·음악·효과음 분리 연구 후보</td><td data-label="라이선스">코드 Apache-2.0 (가중치 조건 별도)</td><td data-label="출처"><a href="https://github.com/kwatcharasupat/bandit-v2">github.com/kwatcharasupat/bandit-v2</a></td></tr>
             <tr><td data-label="이름">NVIDIA Nemotron 3.5 Transcribe 30B-A4B</td><td data-label="위치">사용자가 고를 때만 외부 서비스로 돌리는 대사 인식 후보.<br>연결 코드만 준비, 유료 요청 0회.</td><td data-label="라이선스">OpenMDW 1.1</td><td data-label="출처"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B">huggingface.co 모델 카드</a></td></tr>
-            <tr><td data-label="이름"><span class="term" tabindex="0" data-def="정해 둔 작업 순서를 자동으로 실행해 주는 도구입니다. 여기서는 서버 점검 순서를 맡깁니다.">n8n</span>, <span class="term" tabindex="0" data-def="기록된 숫자를 그래프 대시보드로 보여 주는 도구입니다.">Grafana</span>, <span class="term" tabindex="0" data-def="서버의 처리 건수·처리 시간 같은 숫자를 모아 두는 도구입니다.">Prometheus</span></td><td data-label="위치"><span class="term" tabindex="0" data-def="요청을 받아 일을 처리하고 결과를 돌려주는 컴퓨터입니다.">서버</span> 자동 점검, <span class="term" tabindex="0" data-def="여러 숫자와 그래프를 한 화면에 모아 보여 주는 화면입니다.">대시보드</span>, 서버 기록 수집</td><td data-label="라이선스">지원 서비스로 이용 (n8n Sustainable Use, Grafana AGPL-3.0, Prometheus Apache-2.0)</td><td data-label="출처"><a href="https://docs.n8n.io/workflows/export-import/">docs.n8n.io</a> · <a href="https://grafana.com/docs/grafana/latest/datasources/prometheus/configure/">grafana.com/docs</a></td></tr>
+            <tr><td data-label="이름"><span class="term" tabindex="0" data-def="정해 둔 작업 순서를 자동으로 실행해 주는 도구입니다. 여기서는 서버 점검 순서를 맡깁니다.">n8n</span>, <span class="term" tabindex="0" data-def="기록된 숫자를 그래프 대시보드로 보여 주는 도구입니다.">Grafana</span>, <span class="term" tabindex="0" data-def="서버의 처리 건수·처리 시간 같은 숫자를 모아 두는 도구입니다.">Prometheus</span></td><td data-label="위치"><span class="term" tabindex="0" data-def="요청을 받아 일을 처리하고 결과를 돌려주는 컴퓨터입니다.">서버</span> 자동 점검, <span class="term" tabindex="0" data-def="여러 숫자와 그래프를 한 화면에 모아 보여 주는 화면입니다.">대시보드</span>, 서버 기록 수집</td><td data-label="라이선스">지원 서비스로 이용 (n8n Sustainable Use, Grafana AGPL-3.0, Prometheus&nbsp;Apache-2.0)</td><td data-label="출처"><a href="https://docs.n8n.io/workflows/export-import/">docs.n8n.io</a> · <a href="https://grafana.com/docs/grafana/latest/datasources/prometheus/configure/">grafana.com/docs</a></td></tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>도구 이름보다 ‘무엇을 돕는지’와 ‘지금 쓰는지’를 먼저 봐 주세요.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">도구 이름보다 ‘무엇을 돕는지’와 ‘지금 쓰는지’를 먼저 봐 주세요.</span></p>
 </div>
 </section>
 
@@ -2134,7 +2136,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <p class="small">상태: <span class="st st-plan"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>추가 개발·검증 예정</span> 평가 영상을 <span class="term" tabindex="0" data-def="Demucs를 개선한 판으로, 섞인 소리를 목소리·드럼·베이스·나머지 소리로 나눕니다.">HT-Demucs</span>로 나눠 비교했습니다.<br><span class="term" tabindex="0" data-def="정답 문장과 비교해 잘못 적힌 글자가 몇 %인지 나타낸 값입니다. 0%면 완벽하고 낮을수록 좋습니다. 전문 용어로 글자 오류율(CER)이라고 합니다.">틀린 글자 비율</span>은 <strong>45.5%에서 33.4%로</strong> 줄고 대사 1줄이 빠졌습니다(‘도입 시험 사례: HT-Demucs’ 쪽).</p>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>나눈 소리는 원래 소리와 비교해 더 나을 때만 씁니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">나눈 소리는 원래 소리와 비교해 더 나을 때만 씁니다.</span></p>
 </div>
 </section>
 
@@ -2167,7 +2169,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
   <p class="small"><b>연결 시험</b> 개발자 컴퓨터와 클라우드 서버(11월 4일)에서 요청부터 결과 확인까지 이어 봤습니다.<br>1초짜리 무음 파일로 순서만 확인한 연습 분석(모의 분석)입니다.</p>
   <p class="small"><b>11월 4일 결정</b> 클라우드 대사 분석은 <strong>모든 사용자</strong>가 쓸 수 있게 하기로 했습니다.</p>
   <p class="small"><b>0.3.8 선택 기능</b> 설치마다 자동으로 받는 열쇠로 서버에 연결합니다.<br><mark class="hl">유료 분석을 켜기 전까지 화면에 보이지 않습니다.</mark></p>
-  <p class="takeaway"><span class="k">한 줄</span>기본 분석은 앞으로도 내 컴퓨터 안에서 끝냅니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">기본 분석은 앞으로도 내 컴퓨터 안에서 끝냅니다.</span></p>
 </div>
 </section>
 
@@ -2215,7 +2217,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       </div>
     </div>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>모의 분석은 연결 확인용이고, 대사를 맞게 받아 적는지는 따로 잽니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">모의 분석은 연결 확인용이고, 대사를 맞게 받아 적는지는 따로 잽니다.</span></p>
 </div>
 </section>
 
@@ -2236,7 +2238,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
     </ol>
     <p class="small" style="margin-top:12px">0.3.4~0.3.7은 이 단계와 별개로 <span class="term" tabindex="0" data-def="Chrome·Edge처럼 인터넷 화면을 보는 프로그램입니다.">브라우저</span> 분석과 화면을 고친 버전입니다.<br>0.3.8(<span class="term" tabindex="0" data-def="AI 계산을 빠르게 처리하는 장치입니다. 무거운 AI는 GPU가 있는 서버에서 돌립니다.">GPU</span> 대사 분석·클라우드 선택)과 0.3.9(<span class="term" tabindex="0" data-def="한국농아인협회가 만든 영화용 배리어프리 자막 제작 기준입니다.">가치봄</span> 소리 표기)는 11월 4~5일 <span class="term" tabindex="0" data-def="프로그램 코드와 설치 파일을 올려 공유하는 사이트입니다.">GitHub</span> 기본 브랜치에 올렸습니다.</p>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>서버 연결까지 마쳤고, 다음은 외부 AI 대사 시험입니다.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">서버 연결까지 마쳤고, 다음은 외부 AI 대사 시험입니다.</span></p>
 </div>
 </section>
 
@@ -2268,7 +2270,7 @@ dialog.toc::backdrop{background:var(--color-backdrop)}
       <li><b>클라우드 공개는 앞으로 어떻게 이어 갈까요?</b><span>기술자문(<span class="term" tabindex="0" data-def="마이 AI 랩에서 팀별 기술 멘토링을 맡은 전문가입니다.">리드셰르파</span>)에 공개 상황을 알립니다.<br>열쇠 자동 발급이 실증 범위에 맞는지, 유료 대사 인식 시점·비용, 공개 시점을 문의합니다.</span></li>
     </ol>
   </div>
-  <p class="takeaway"><span class="k">한 줄</span>다음 회의에서 검수 영상, 홍보 경로·목표 응답 수, 조사 문항부터 정해 주세요.</p>
+  <p class="takeaway"><span class="k">한 줄</span><span class="tk">다음 회의에서 검수 영상, 홍보 경로·목표 응답 수, 조사 문항부터 정해 주세요.</span></p>
 </div>
 </section>
 
